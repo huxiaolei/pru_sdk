@@ -1,9 +1,14 @@
 ################### PRU building #######################
-PRU_CGT_DIR = /opt/PRU/ti-cgt-pru_2.1.0
+#export path first
+#export PATH=${PATH}:/opt/gnu/ti-cgt-pru_2.1.0/bin
+#PRU_CGT_DIR = /opt/PRU/ti-cgt-pru_2.1.0
+#changed accordingly to cygwin
+ROOT_DIR = ../../../../../../
+PRU_CGT_DIR = ${ROOT_DIR}/opt/gnu/ti-cgt-pru_2.1.0/
 
 CC = ${PRU_CGT_DIR}/bin/clpru
 #DEVICE=am335x
-AM335X_StarterWare_PATH = /opt/AM335X_StarterWare_02_00_01_01
+AM335X_StarterWare_PATH = ${ROOT_DIR}home/XHU1_000/AM335X_StarterWare_02_00_01_01
 #CFLAGS = --silicon_version=3 -o1 -D$(DEVICE)
 CFLAGS = --silicon_version=2 --hardware_mac=on -O3
 HEXBIN = ${PRU_CGT_DIR}/bin/hexpru
